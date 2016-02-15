@@ -1,4 +1,4 @@
-Sitemap: http://localhost:8889/sitemapindex.xml
+Sitemap: https://miyakogi.github.io/blog_nikola/sitemapindex.xml
 
 User-Agent: *
-Host: localhost:8889
+Host: miyakogi.github.io

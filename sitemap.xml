@@ -6,191 +6,191 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>http://localhost:8889/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/2012/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/2012/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/2016/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/2016/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/archive.html</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/archive.html</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/authors/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/authors/</loc>
   <lastmod>2016-02-14T10:33:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/authors/miyakogi/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/authors/miyakogi/</loc>
   <lastmod>2016-02-14T10:33:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/authors/nikola-tesla/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/authors/nikola-tesla/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/authors/roberto-alsina/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/authors/roberto-alsina/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/categories/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/categories/blog/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/blog/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/categories/cat_nikola/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/cat_nikola/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/categories/cat_saas/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/cat_saas/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/categories/cat_vim/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/cat_vim/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/categories/ci/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/ci/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/categories/demo/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/demo/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/categories/nikola/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/nikola/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/categories/python/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/python/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/categories/vim/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/vim/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/galleries/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/galleries/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/galleries/demo/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/galleries/demo/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/listings/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/listings/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/listings/__pycache__/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/listings/__pycache__/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/listings/hello.py.html</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/listings/hello.py.html</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/posts/a/2016-2-14_livemark_update/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/posts/a/2016-2-14_livemark_update/</loc>
   <lastmod>2016-02-14T07:47:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/posts/a/channel1/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/posts/a/channel1/</loc>
   <lastmod>2016-02-14T07:47:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/posts/a/ci/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/posts/a/ci/</loc>
   <lastmod>2016-02-14T07:47:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/posts/a/livemark1/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/posts/a/livemark1/</loc>
   <lastmod>2016-02-14T07:47:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/posts/channel/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/posts/channel/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/posts/ci/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/posts/ci/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/posts/livemark/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/posts/livemark/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/posts/livemark_update/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/posts/livemark_update/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/posts/welcome-to-nikola/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/posts/welcome-to-nikola/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/about-nikola/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/about-nikola/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/bootstrap-demo/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/bootstrap-demo/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/charts/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/charts/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/creating-a-theme/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/creating-a-theme/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/dr-nikolas-vendetta/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/dr-nikolas-vendetta/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/extending/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/extending/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/handbook/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/handbook/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/internals/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/internals/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/listings-demo/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/listings-demo/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/path-handlers/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/path-handlers/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/quickref/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/quickref/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/quickstart/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/quickstart/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/slides-demo/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/slides-demo/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/social_buttons/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/social_buttons/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
  <url>
-  <loc>http://localhost:8889/stories/theming/</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/stories/theming/</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </url>
 </urlset>

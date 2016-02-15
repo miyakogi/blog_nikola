@@ -6,67 +6,67 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://localhost:8889/authors/miyakogi.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/authors/miyakogi.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/authors/nikola-tesla.xml</loc>
+  <loc>https://miyakogi.github.io/blog_nikola/authors/nikola-tesla.xml</loc>
   <lastmod>2016-02-14T08:12:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/authors/roberto-alsina.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/authors/roberto-alsina.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/categories/blog.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/blog.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/categories/cat_nikola.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/cat_nikola.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/categories/cat_saas.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/cat_saas.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/categories/cat_vim.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/cat_vim.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/categories/ci.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/ci.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/categories/demo.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/demo.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/categories/nikola.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/nikola.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/categories/python.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/python.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/categories/vim.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/categories/vim.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/galleries/demo/rss.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/galleries/demo/rss.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/galleries/rss.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/galleries/rss.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/rss.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/rss.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://localhost:8889/sitemap.xml</loc>
-  <lastmod>2016-02-14T23:29:00Z</lastmod>
+  <loc>https://miyakogi.github.io/blog_nikola/sitemap.xml</loc>
+  <lastmod>2016-02-15T03:48:00Z</lastmod>
  </sitemap>
 </sitemapindex>
