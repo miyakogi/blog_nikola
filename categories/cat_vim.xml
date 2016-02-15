@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blank File (vim)</title><link>http://localhost:8889/</link><description></description><atom:link href="http://localhost:8889/categories/cat_vim.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 14 Feb 2016 23:57:53 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Livemark.vimを色々更新しました</title><link>http://localhost:8889/posts/livemark_update/</link><dc:creator>miyakogi</dc:creator><description>&lt;div&gt;&lt;p&gt;Markdown文書をリアルタイムで更新するVimプラグイン、&lt;a href="https://github.com/miyakogi/livemark.vim"&gt;Livemark.vim&lt;/a&gt;を更新しました。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;+channel&lt;/code&gt;なVimじゃなくても&lt;code&gt;+python&lt;/code&gt;なら動作するので、よければお試し下さい。
+安定したものがいい場合は&lt;a href="https://github.com/kannokanno/previm"&gt;previm&lt;/a&gt;などをおすすめします。&lt;/p&gt;
+&lt;p&gt;オプションはGitHubの&lt;a href="https://github.com/miyakogi/livemark.vim"&gt;README&lt;/a&gt;に一応全て書いてあります。
+まだバグがあるかもしれませんが、その時は&lt;a href="https://github.com/miyakogi/livemark.vim/issues"&gt;Issue&lt;/a&gt;に報告していただけると喜んで対応します。Issueを書くのが面倒でしたら、Twitterで&lt;a href="https://twitter.com/MiyakoDev"&gt;@MiyakoDev&lt;/a&gt;にメンションしていただいても大丈夫です。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://localhost:8889/posts/livemark_update/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>vim</category><guid>http://localhost:8889/posts/livemark_update/</guid><pubDate>Sun, 14 Feb 2016 04:00:00 GMT</pubDate></item><item><title>Vim の channel と json のパフォーマンス</title><link>http://localhost:8889/posts/channel/</link><dc:creator>miyakogi</dc:creator><description>&lt;div&gt;&lt;p&gt;先日公開した &lt;a href="https://github.com/miyakogi/livemark.vim"&gt;livemark.vim&lt;/a&gt; には想像以上にたくさんの反響をいただきました。
+ありがとうございます。
+最近では海外の方からもGithubのスターをいただきました。
+思いつきで作ったプラグインでしたが、せっかくなので普段使いできるようにいくつか更新しました。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://localhost:8889/posts/channel/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>vim</category><guid>http://localhost:8889/posts/channel/</guid><pubDate>Sat, 06 Feb 2016 01:00:00 GMT</pubDate></item><item><title>Vim に channel が実装されたので Markdown をプレビューするプラグインを作りました</title><link>http://localhost:8889/posts/livemark/</link><dc:creator>miyakogi</dc:creator><description>&lt;div&gt;&lt;p&gt;Vimにchannel機能が実装されました。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://mattn.kaoriya.net/software/vim/20160129114716.htm"&gt;Big Sky :: Vim にchannel(ソケット通信機能)が付いた。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;昨日から株価・為替は乱高下し、大臣の辞任、日銀のマイナス金利導入決定など国内では大きなニュースが続いていますが、Vimmerにとってはこのパッチが最も影響があったのではないでしょうか。&lt;/p&gt;
+&lt;p&gt;というわけで、せっかくなのでchannel機能を使ってプラグインを書いてみました。
+みんな大好きMarkdownのリアルタイムプレビューです。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://localhost:8889/posts/livemark/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>vim</category><guid>http://localhost:8889/posts/livemark/</guid><pubDate>Fri, 29 Jan 2016 01:00:00 GMT</pubDate></item></channel></rss>

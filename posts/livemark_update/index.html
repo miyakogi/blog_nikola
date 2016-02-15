@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="http://localhost:8889/posts/livemark_update/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livemark.vimを色々更新しました | Blank File</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://localhost:8889/posts/livemark_update/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="miyakogi">
+<link rel="prev" href="../ci/" title="カバレッジ取得サービスの比較（Coveralls.ioとCodecove.io)" type="text/html">
+<meta property="og:site_name" content="Blank File">
+<meta property="og:title" content="Livemark.vimを色々更新しました">
+<meta property="og:url" content="http://localhost:8889/posts/livemark_update/">
+<meta property="og:description" content="Markdown文書をリアルタイムで更新するVimプラグイン、Livemark.vimを更新しました。
++channelなVimじゃなくても+pythonなら動作するので、よければお試し下さい。
+安定したものがいい場合はprevimなどをおすすめします。
+オプションはGitHubのREADMEに一応全て書いてあります。
+まだバグがあるかもしれませんが、その時はIssueに報告していただけると喜んで">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-02-14T13:00:00+09:00">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="vim">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://localhost:8889/">
+
+                <span id="blog-title">Blank File</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Livemark.vimを色々更新しました</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    <a href="../../authors/miyakogi/">miyakogi</a>
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2016-02-14T13:00:00+09:00" itemprop="datePublished" title="2016-02-14 13:00">2016-02-14 13:00</time></a></p>
+            
+        <p class="sourceline"><a href="index.md" id="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Markdown文書をリアルタイムで更新するVimプラグイン、<a href="https://github.com/miyakogi/livemark.vim">Livemark.vim</a>を更新しました。</p>
+<p><code>+channel</code>なVimじゃなくても<code>+python</code>なら動作するので、よければお試し下さい。
+安定したものがいい場合は<a href="https://github.com/kannokanno/previm">previm</a>などをおすすめします。</p>
+<p>オプションはGitHubの<a href="https://github.com/miyakogi/livemark.vim">README</a>に一応全て書いてあります。
+まだバグがあるかもしれませんが、その時は<a href="https://github.com/miyakogi/livemark.vim/issues">Issue</a>に報告していただけると喜んで対応します。Issueを書くのが面倒でしたら、Twitterで<a href="https://twitter.com/MiyakoDev">@MiyakoDev</a>にメンションしていただいても大丈夫です。</p>
+<!--more-->
+
+<h4>変更点</h4>
+<p><a href="http://h-miyako.hatenablog.com/entry/2016/02/06/135203">先日の記事</a>以降に追加した機能（オプション）は以下のとおりです。</p>
+<ul>
+<li>ユーザー指定のcss/jsを読み込む設定追加</li>
+<li>シンタックスハイライトのテーマ指定追加</li>
+<li>プレビュー画面のスクロール同期を止めるオプション追加</li>
+</ul>
+<p>ついでに、Pythonで書かれたプレビュー用のサーバー部分を<a href="https://github.com/miyakogi/livemark">別リポジトリ</a>に分離しました。
+まだ分離しただけに近い状態ですが、機能を整理してドキュメントやテストを追加して、Vim以外のエディタからも使えるような形にできたらいいなぁ、と思っています。</p>
+<h5>CSS/JSファイルの読み込み</h5>
+<p>デフォルトでは日本語向けBootstrapテーマの<a href="http://honokak.osaka/">Honoka</a>を読み込んでいます。
+それに伴い、CDNからjQueryもロードしています。</p>
+<p>ちょっと使うには十分だと思いますが、自分のブログのテーマと同じデザインで使いたいなどの希望があるだろうと考え、CSSやJSを指定できるようにしました。
+パスの処理が雑なので、Windowsだと動かないかもしれません。</p>
+<p>指定方法は、例えばCSSを追加してデフォルトのCSSを使わない場合は以下のようになります。</p>
+<pre class="code literal-block"><span class="k">let</span> <span class="k">g</span>:livemark_css_files <span class="p">=</span> [expand<span class="p">(</span><span class="s1">'~/dotfiles/static/css/bootstrap.ja.min.css'</span><span class="p">)</span>]
+<span class="k">let</span> <span class="k">g</span>:livemark_no_default_css <span class="p">=</span> <span class="m">1</span>
+</pre>
+
+
+<p>複数のCSSファイルを指定したい場合はそれぞれリストに追加してください。
+リストに追加された順番で読み込みます。
+URLを指定すれば（たぶん）Web上のリソースを読み込むこともできます。
+その場合はURLを指定してください。
+例えば、<code>let g:livemark_css_files = ['https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js']</code>のような感じです。</p>
+<p>デフォルトのCSSを使用し、CSSを追加したいだけの場合は二行目は不要です。
+その場合、ブラウザ上での読み込み順は デフォルトのCSS -&gt; 追加されたCSSの順になります。</p>
+<p>JSについても同様です。各オプションの<code>css</code>を<code>js</code>に変更してください。</p>
+<h5>シンタックスハイライトのテーマ設定</h5>
+<p>シンタックスハイライトには<a href="http://pygments.org/">pygments</a>を使っています。
+デフォルトでは特に指定していないのでpygmentsのデフォルトテーマが使われますが、他にも色々なテーマがあるので変更できるようにしました。</p>
+<p>変更するには以下の設定をvimrcに追加してください。</p>
+<pre class="code literal-block"><span class="k">let</span> <span class="k">g</span>:livemark_highlight_theme <span class="p">=</span> <span class="s1">'テーマ名'</span>
+</pre>
+
+
+<p>使用可能なテーマはインストールされているpygmentsに依存します。
+コマンドラインで確認するには、以下のコマンドを実行して下さい。</p>
+<pre class="code literal-block">python3 -c <span class="s2">"import pygments.styles; print(pygments.styles.STYLE_MAP.keys())"</span>
+</pre>
+
+
+<p>表示されたキーが利用可能なテーマ名です。
+Livemarkのオプションで特定のpythonを指定している場合はpython3の部分をそちらに変えてください。</p>
+<h5>スクロールの同期を止めるオプションの追加</h5>
+<p>デフォルトではVimのカーソル位置に応じて画面をスクロールしています。
+具体的には、Vimのバッファに表示されている最初の行が画面の最上部に来るように調整しています。</p>
+<p>とはいえ、MarkdownからHTMLに変更する時に行番号がずれてしまうので、一応頑張って調整していますが完璧ではありません。
+また、書いている時に動かない方がいい場合もあるかと思います。</p>
+<p>ということで、以下のオプションでスクロールを停止できます。</p>
+<pre class="code literal-block"><span class="k">let</span> <span class="k">g</span>:livemark_disable_scroll <span class="p">=</span> <span class="m">1</span>
+</pre>
+
+
+<h4>内部的な話</h4>
+<p>内部的にはかなり大きな変更を行いました。</p>
+<p>当初はカーソル移動やテキストの編集が行われるたびに全文をhtmlにパースし、プレビュー画面全部を書き換えるという力技で実装されていたのですが、さすがにこれだと大きなファイルの時に描画の遅れが深刻だったので修正しました。
+今は差分を検出して変更のあった部分だけを更新しています。
+個人的にはJSツラいのでJSではなくPythonで処理しました。</p>
+<p>ちょうど今<a href="https://github.com/miyakogi/wdom_py">wdom</a>というPythonからブラウザ上のDOMを操作するライブラリを開発しているので、これを使ってHTMLからDOMにパースして変更箇所だけをブラウザ上で変更、という処理にしています。Livemark用のJSはスクロール用の関数を数行書いただけで、他はPythonで実装できました。変更がない時はHTMLへの変換も行わないので、カーソル移動はかなりスムーズになったと思います。</p>
+<p>なお、このライブラリ（wdom）は絶賛開発途中です。
+Livemarkにバグがあっても「まぁ、そういう時もあるよね」という温かい心で接してください。</p>
+<p>ちなみに、wdomで目指すところはほぼJSフリーでelectron/ブラウザを使ったGUIアプリの開発です。
+昨年からelectronが流行ってますけど、JSでデスクトップアプリ作りたい人だけじゃなくて、CSSフレームワーク（Bootstrapとか）のために渋々JS書いてる人も多いんじゃないの？というのが開発の動機です。
+<s>つまり既存のGUIライブラリは見た目が残念・・・</s>
+今はLivemarkで色々使ってみて、必要な機能の確認とバグを洗い出している感じです。
+なのでまだドキュメントもありませんし、APIも変わる可能性があります。
+落ち着いたらPyPIに登録して <strong>「まだじゃわすくりぷとで消耗しているの？」</strong> 的な煽りタイトルの記事を書きたいと思っています。
+ヘタれたらもっと穏便なタイトルにするので優しくしてください。</p>
+<p>以上です。
+開発中のものを色々取り入れているのでバグがある可能性大ですが、人柱精神旺盛な方、よろしければお試しください。</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/python/" rel="tag">python</a></li>
+            <li><a class="tag p-category" href="../../categories/vim/" rel="tag">vim</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../ci/" rel="prev" title="カバレッジ取得サービスの比較（Coveralls.ioとCodecove.io)">Previous post</a>
+            </li>
+        </ul></nav></aside></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2016         <a href="mailto:n.tesla@example.com">miyakogi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

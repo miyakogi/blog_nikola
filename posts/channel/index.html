@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="http://localhost:8889/posts/channel/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vim の channel と json のパフォーマンス | Blank File</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://localhost:8889/posts/channel/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="miyakogi">
+<link rel="prev" href="../livemark/" title="Vim に channel が実装されたので Markdown をプレビューするプラグインを作りました" type="text/html">
+<link rel="next" href="../ci/" title="カバレッジ取得サービスの比較（Coveralls.ioとCodecove.io)" type="text/html">
+<meta property="og:site_name" content="Blank File">
+<meta property="og:title" content="Vim の channel と json のパフォーマンス">
+<meta property="og:url" content="http://localhost:8889/posts/channel/">
+<meta property="og:description" content="先日公開した livemark.vim には想像以上にたくさんの反響をいただきました。
+ありがとうございます。
+最近では海外の方からもGithubのスターをいただきました。
+思いつきで作ったプラグインでしたが、せっかくなので普段使いできるようにいくつか更新しました。
+
+
+
+channel をサポートしない vim では python を使うように修正
+channelをサポートするvimでもpyth">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-02-06T10:00:00+09:00">
+<meta property="article:tag" content="vim">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://localhost:8889/">
+
+                <span id="blog-title">Blank File</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Vim の channel と json のパフォーマンス</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    <a href="../../authors/miyakogi/">miyakogi</a>
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2016-02-06T10:00:00+09:00" itemprop="datePublished" title="2016-02-06 10:00">2016-02-06 10:00</time></a></p>
+            
+        <p class="sourceline"><a href="index.md" id="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>先日公開した <a href="https://github.com/miyakogi/livemark.vim">livemark.vim</a> には想像以上にたくさんの反響をいただきました。
+ありがとうございます。
+最近では海外の方からもGithubのスターをいただきました。
+思いつきで作ったプラグインでしたが、せっかくなので普段使いできるようにいくつか更新しました。</p>
+<!-- more -->
+
+<ul>
+<li>channel をサポートしない vim では python を使うように修正<ul>
+<li>channelをサポートするvimでもpythonを使いたい場合は <code>let g:livemark_force_pysocket=1</code> で使えます</li>
+</ul>
+</li>
+<li>マークダウンの変換及びプレビュー表示をするpythonを指定する設定追加<ul>
+<li>
+<code>let g:livemark_python='/path/to/python'</code> で指定できます</li>
+</ul>
+</li>
+<li>プレビューを表示するブラウザを vim から設定できるように修正<ul>
+<li>
+<code>let g:livemark_browser='[ブラウザ名]'</code> で設定できます</li>
+<li>設定可能なブラウザと名前は<a href="http://docs.python.jp/3/library/webbrowser.html#webbrowser.register">ここ</a>を参照してください</li>
+</ul>
+</li>
+<li>プレビュー表示に使うポートと vim からデータを送るために使うポートの設定を追加<ul>
+<li>それぞれ <code>g:livemark_browser_port</code> と <code>g:livemark_vim_port</code> です</li>
+<li>デフォルト値はそれぞれ 8089, 8090 です</li>
+</ul>
+</li>
+</ul>
+<p>とはいえ、まだ安定しているとは言いがたい状態なので、マークダウンのプレビューには <a href="https://github.com/kannokanno/previm">previm</a> などを使うのがいいと思います。</p>
+<p>今の実装だと変更がある度に画面全体を再描画していて大きいファイルのプレビューは厳しいので、差分だけ更新するような処理を実装中です。</p>
+<p>そんな感じで地味に更新したりしてたのですが、<a href="http://ftp.vim.org/vim/patches/7.4/7.4.1244">このパッチ</a>でchannel関係の関数名が全部変わったので動かなくなりました（つらい</p>
+<p><img alt="channel error" src="../../images/channel_error.png"></p>
+<p>修正してもまた仕様変更あったら面倒だなぁ、と微妙にやる気が減退気味だったのと、pythonでデータ送ってもそんなにもたつきを感じなかったりして「もしかして Vim の channel より python の方が速い・・・？いや channel も json も C で書かれてるしそんなはずは・・・でも Vim だし何が起きるかわからん」という疑問が沸き起こったので測ってみました。</p>
+<p>Livemark.vim では編集中のバッファの文字列を取得して json として送っているので、</p>
+<ol>
+<li>データをjsonに変換する処理</li>
+<li>変換されたデータをサーバーに送りつける処理</li>
+</ol>
+<p>に分けて計測しました。また、Vimは一旦jsonに変換してから送る場合 (raw channel) とjsonへの変換も一気に行う場合 (json channel) の両方を測りました。</p>
+<p>データを送りつけられるサーバーがボトルネックになると意味ないので、サーバーは Nim で書きました。 サーバーのコードはこんな感じです。</p>
+<pre class="code literal-block"><span class="kn">import</span> <span class="n">nativesockets</span>
+<span class="kn">import</span> <span class="n">net</span>
+
+<span class="kd">var</span> <span class="n">server</span> <span class="o">=</span> <span class="n">newSocket</span><span class="p">()</span>
+<span class="k">let</span> <span class="n">port</span> <span class="o">=</span> <span class="n">Port</span><span class="p">(</span><span class="mi">8090</span><span class="p">)</span>
+<span class="n">server</span><span class="p">.</span><span class="n">bindAddr</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="s">"localhost"</span><span class="p">)</span>
+<span class="n">server</span><span class="p">.</span><span class="n">listen</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="kp">true</span><span class="p">:</span>
+  <span class="kd">var</span> <span class="n">client</span> <span class="o">=</span> <span class="n">newSocket</span><span class="p">()</span>
+  <span class="n">server</span><span class="p">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+  <span class="n">echo</span> <span class="s">"accepted"</span>
+
+  <span class="k">while</span> <span class="kp">true</span><span class="p">:</span>
+    <span class="kd">var</span> <span class="n">data</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="kd">var</span> <span class="n">res_client</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">recv</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">4000</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">res_client</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">echo</span> <span class="s">"connection closed"</span>
+      <span class="n">client</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+      <span class="k">break</span>
+
+<span class="n">server</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</pre>
+
+
+<p>ベンチマークのコードはこんな感じ</p>
+<pre class="code literal-block"><span class="k">scriptencoding</span> utf<span class="m">-8</span>
+
+<span class="k">let</span> s:data <span class="p">=</span> readfile<span class="p">(</span><span class="s1">'data.txt'</span><span class="p">)</span>
+
+<span class="k">function</span><span class="p">!</span> s:py_eval<span class="p">()</span> abort
+  <span class="k">python</span> <span class="o">&lt;&lt;</span>EOF
+<span class="kn">import</span> <span class="nn">socket</span><span class="o">,</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">vim</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">vim</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s1">'s:data'</span><span class="p">)</span>
+<span class="n">EOF</span>
+<span class="n">endfunction</span>
+
+<span class="n">function</span><span class="err">!</span> <span class="n">s</span><span class="p">:</span><span class="n">json_vim</span><span class="p">()</span> <span class="n">abort</span>
+  <span class="n">let</span> <span class="n">s</span><span class="p">:</span><span class="n">json_data</span> <span class="o">=</span> <span class="n">jsonencode</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="n">data</span><span class="p">)</span>
+<span class="n">endfunction</span>
+
+<span class="n">function</span><span class="err">!</span> <span class="n">s</span><span class="p">:</span><span class="n">json_py</span><span class="p">()</span> <span class="n">abort</span>
+  <span class="n">python</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span>
+<span class="n">json_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">EOF</span>
+<span class="n">endfunction</span>
+
+<span class="n">function</span><span class="err">!</span> <span class="n">s</span><span class="p">:</span><span class="n">send_data_raw</span><span class="p">()</span> <span class="n">abort</span>
+  <span class="n">let</span> <span class="n">handler</span> <span class="o">=</span> <span class="n">ch_open</span><span class="p">(</span><span class="s1">'localhost:8090'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'mode'</span><span class="p">:</span> <span class="s1">'raw'</span><span class="p">})</span>
+  <span class="n">call</span> <span class="n">ch_sendraw</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span><span class="n">json_data</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="n">call</span> <span class="n">ch_close</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+<span class="n">endfunction</span>
+
+<span class="n">function</span><span class="err">!</span> <span class="n">s</span><span class="p">:</span><span class="n">send_data_py</span><span class="p">()</span> <span class="n">abort</span>
+  <span class="n">python</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span>
+<span class="c1"># data = json.dumps(vim.eval('s:data')).encode('utf-8')</span>
+<span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">create_connection</span><span class="p">((</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">8090</span><span class="p">))</span>
+<span class="n">sock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">json_data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span>
+<span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+EOF
+<span class="k">endfunction</span>
+
+<span class="k">function</span><span class="p">!</span> s:send_data_sock<span class="p">()</span> abort
+  <span class="k">let</span> handler <span class="p">=</span> ch_open<span class="p">(</span><span class="s1">'localhost:8090'</span><span class="p">,</span> {<span class="s1">'mode'</span>: <span class="s1">'json'</span>}<span class="p">)</span>
+  <span class="k">call</span> ch_sendexpr<span class="p">(</span>handler<span class="p">,</span> s:data<span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+  <span class="k">call</span> ch_close<span class="p">(</span>handler<span class="p">)</span>
+<span class="k">endfunction</span>
+
+<span class="k">let</span> start_time <span class="p">=</span> reltime<span class="p">()</span>
+<span class="k">call</span> s:py_eval<span class="p">()</span>
+echo <span class="s1">'py_eval:'</span> . reltimestr<span class="p">(</span>reltime<span class="p">(</span>start_time<span class="p">))</span>
+
+<span class="k">let</span> start_time <span class="p">=</span> reltime<span class="p">()</span>
+<span class="k">call</span> s:json_vim<span class="p">()</span>
+echo <span class="s1">'json_vim:'</span> . reltimestr<span class="p">(</span>reltime<span class="p">(</span>start_time<span class="p">))</span>
+
+<span class="k">let</span> start_time <span class="p">=</span> reltime<span class="p">()</span>
+<span class="k">call</span> s:json_py<span class="p">()</span>
+echo <span class="s1">'json_py:'</span> . reltimestr<span class="p">(</span>reltime<span class="p">(</span>start_time<span class="p">))</span>
+
+<span class="k">let</span> start_time <span class="p">=</span> reltime<span class="p">()</span>
+<span class="k">call</span> s:send_data_raw<span class="p">()</span>
+echo <span class="s1">'raw_channel:'</span> . reltimestr<span class="p">(</span>reltime<span class="p">(</span>start_time<span class="p">))</span>
+
+<span class="k">let</span> start_time <span class="p">=</span> reltime<span class="p">()</span>
+<span class="k">call</span> s:send_data_py<span class="p">()</span>
+echo <span class="s1">'python:'</span> . reltimestr<span class="p">(</span>reltime<span class="p">(</span>start_time<span class="p">))</span>
+
+<span class="k">let</span> start_time <span class="p">=</span> reltime<span class="p">()</span>
+<span class="k">call</span> s:send_data_sock<span class="p">()</span>
+echo <span class="s1">'json_channel:'</span> . reltimestr<span class="p">(</span>reltime<span class="p">(</span>start_time<span class="p">))</span>
+</pre>
+
+
+<p><code>data.txt</code> には <code>This is sample data\n\n</code> が10万回、合計20万行入っています。
+Pythonの場合は Vim で読み込んだデータを python に渡す処理も入ってくるので、そこは別で計測しています。</p>
+<p>結果はこうなりました。（単位は秒、Vim のバージョンは 7.4.1265 です）</p>
+<table>
+<thead><tr>
+<th></th>
+<th>vim (json)</th>
+<th>vim (raw)</th>
+<th>python</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>vim -&gt; py</td>
+<td>-</td>
+<td>-</td>
+<td>0.165894</td>
+</tr>
+<tr>
+<td>json化</td>
+<td>-</td>
+<td>0.496177</td>
+<td>0.300104</td>
+</tr>
+<tr>
+<td>データ送信</td>
+<td>0.488828</td>
+<td>0.023818</td>
+<td>0.087396</td>
+</tr>
+<tr>
+<td>合計</td>
+<td>0.488828</td>
+<td>0.519995</td>
+<td>0.553394</td>
+</tr>
+</tbody>
+</table>
+<p>合計あまり変わらない・・・<s>Pythonよりは速くて「channelすごい！jsonすごい！」って記事になる予定だったのに・・・・</s>jsonのエンコードにすごい時間かかってますね・・・よく考えたら、一度Vim scriptになってるのでむしろよく頑張ってる方だと思います。
+「あれ、たしかpython標準のjsonモジュールって・・・」って<a href="http://postd.cc/memory-use-and-speed-of-json-parsers/">などの疑問</a>を持ってはいけません。</p>
+<p>というわけで！Pythonで処理してもあまりパフォーマンスに影響なさそうなので！むしろ20万行のマークダウンとか書かないと思うので！channelの仕様変更に負けずに地味に更新していきたいと思います！レッツポジティブ！</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/vim/" rel="tag">vim</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../livemark/" rel="prev" title="Vim に channel が実装されたので Markdown をプレビューするプラグインを作りました">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../ci/" rel="next" title="カバレッジ取得サービスの比較（Coveralls.ioとCodecove.io)">Next post</a>
+            </li>
+        </ul></nav></aside></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2016         <a href="mailto:n.tesla@example.com">miyakogi</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
